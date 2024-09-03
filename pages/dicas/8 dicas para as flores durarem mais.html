@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Abelha Web | Conteudo sobre as abelhas" />
+  <link rel="shortcut icon" href="/assets/images/logo/logo.png" type="image/x-icon" />
+  <title>8 dicas para as flores durarem mais</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/styles/style.css" />
+  <link rel="stylesheet" href="/assets/styles/media-queries.css" />
+  <link rel="stylesheet" href="/assets/styles/root.css" />
+</head>
+
+<body x-data="{showModal:false}" :class="{'overflow-y-hidden': showModal}">
+  <header class="fixed top-0 w-full bg-white z-10">
+    <nav class="flex justify-between items-center px-8 py-4 max-[992px]:px-2">
+      <div class="hidden max-[992px]:block">
+        <button class="burger flex items-center text-black p-3">
+          <svg class="block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28"
+            color="#000000" fill="none">
+            <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <a href="/index.html" class="flex items-center gap-2 text-lg">
+        <img src="/assets/images/logo/logo.png" class="w-8" alt="Logo AbelhaWeb" />
+        Abelha Web
+      </a>
+      <ul class="navlinks max-[992px]:hidden [992px]:flex flex items-center gap-8">
+        <li><a href="/index.html" class="nav__link">Início</a></li>
+        <li>
+          <div x-data="{open:false}" @mouseleave="open = false" @mouseover="open = true" class="relative">
+            <button class="flex items-center rounded-md" @mouseover="open = true">
+              <span class="mr-2 text-md">Curiosidades</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
+                <path
+                  d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                </path>
+              </svg>
+            </button>
+
+            <div x-show="open" x-transition:leave="transition ease-in-out duration-200"
+              x-transition:leave-start="opacity-1" x-transition:leave-end="opacity-0"
+              class="dropdown__box py-2 bg-gray-50 rounded-lg shadow-md z-10" style="display: none">
+              <a href="/pages/conhecimentos e curiosidades/curiosidades/curiosidades sobre abelhas e importância delas.html"
+                class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                Curiosidades sobre abelhas e importância delas
+              </a>
+              <a href="/pages/conhecimentos e curiosidades/curiosidades/sociedade e o ciclo de vida das abelhas.html"
+                class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                Sociedade e o ciclo de vida das abelhas
+              </a>
+              <a href="/pages/conhecimentos e curiosidades/curiosidades/ferroada de abelha é 200 vezes mais forte que corticoide. V ou F.html"
+                class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                Ferroada de abelha é 200 vezes mais forte que corticoide. V ou
+                F?
+              </a>
+
+              <div x-data="{open:false}" @mouseleave="open = false" class="relative">
+                <div class="flex justify-between items-center px-4 mt-2 hover:bg-yellow-200 p-2 cursor-pointer"
+                  @mouseover="open = true">
+                  <span class="mr-2 text-md">Conhecimentos</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                      d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z">
+                    </path>
+                  </svg>
+                </div>
+
+                <div x-show="open" x-transition:leave="transition ease-in-out duration-200"
+                  x-transition:leave-start="opacity-1" x-transition:leave-end="opacity-0"
+                  class="submenu__dropdown__box py-2 bg-gray-50 shadow-md z-10" style="display: none">
+                  <a href="/pages/conhecimentos e curiosidades/conhecimentos/abelhas funções do zangão e das operárias.html"
+                    class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                    Abelhas funções do zangão e das operárias
+                  </a>
+                  <a href="/pages/conhecimentos e curiosidades/conhecimentos/características gerais e a comunicação das abelhas.html"
+                    class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                    Características gerais e a comunicação das abelhas
+                  </a>
+                  <a href="/pages/conhecimentos e curiosidades/conhecimentos/como as abelhas recolhem e transportam o pólen das flores.html"
+                    class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                    Como as abelhas recolhem e transportam o pólen das flores
+                  </a>
+                  <a href="/pages/conhecimentos e curiosidades/conhecimentos/as abelhas são importantes para o planeta.html"
+                    class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                    Como as abelhas são importantes para o planeta
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div x-data="{open:false}" @mouseleave="open = false" @mouseover="open = true" class="relative">
+            <button class="flex items-center rounded-md" @mouseover="open = true">
+              <span class="mr-2 text-md">Dicas</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
+                <path
+                  d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                </path>
+              </svg>
+            </button>
+
+            <div x-show="open" x-transition:leave="transition ease-in-out duration-200"
+              x-transition:leave-start="opacity-1" x-transition:leave-end="opacity-0"
+              class="dropdown__box py-2 bg-gray-50 rounded-lg shadow-md z-10" style="display: none">
+              <a href="/pages/dicas/6 formas de ter mais abelhas polinizadoras em sua horta ou jardim.html"
+                class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                6 formas de ter mais abelhas polinizadoras em sua horta ou
+                jardim
+              </a>
+              <a href="/pages/dicas/7 passos para começar a trabalhar com apicultura.html"
+                class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                7 passos para começar a trabalhar com apicultura
+              </a>
+              <a href="/pages/dicas/como iniciar uma criação de abelhas.html"
+                class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                Como iniciar uma criação de abelhas
+              </a>
+              <a href="/pages/dicas/confira os cuidados a tomar com relação as abelhas.html"
+                class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                Confira os cuidados a tomar com relação as abelhas
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__link cursor-pointer" @click="showModal = true" onclick="showModal()">
+          Contato
+        </li>
+      </ul>
+      <button class="search__btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+          <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path
+            d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <div class="search__container">
+        <div class="search__box">
+          <form action="#">
+            <input type="search" placeholder="Buscar" />
+            <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+                  stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </form>
+        </div>
+        <div class="close__btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+            <path d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </nav>
+    <div class="menu relative z-10 invisible">
+      <div class="opacity-menu fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav class="menu__navigation flex-flex-col w-5/6 max-w-sm h-full py-6 px-6 bg-white border-r overflow-y-auto">
+        <div class="flex items-center mb-8">
+          <a href="/index.html" class="flex items-center gap-2 mr-auto text-lg font-medium">
+            <img src="/assets/images/logo/logo.png" class="w-9" alt="Logo AbelhaWeb" />
+            Abelha Web
+          </a>
+          <button class="close-menu">
+            <svg class="cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              width="28" height="28" color="#000000" fill="none">
+              <path d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div>
+          <ul class="navlinks__menu">
+            <li class="mb-3">
+              <a href="/index.html"
+                class="block p-2 text-lg font-medium text-black hover:bg-yellow-200 rounded nav__link">Início</a>
+            </li>
+            <div class="mb-3 mx-0">
+              <div x-data="{open:false}" @click.away="open = false" class="relative">
+                <div class="flex items-center rounded-md" @click="open = !open">
+                  <div class="cursor-pointer flex justify-between items-center w-full p-2 hover:bg-yellow-200 rounded">
+                    <span class="mr-2 text-lg">Curiosidades</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
+                      <path
+                        d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div x-show="open" x-transition:leave="transition ease-in-out duration-200"
+                  x-transition:leave-start="opacity-1" x-transition:leave-end="opacity-0"
+                  class="dropdown__box py-2 bg-gray-50 rounded-lg shadow-md z-10" style="display: none">
+                  <a href="/pages/conhecimentos e curiosidades/curiosidades/curiosidades sobre abelhas e importância delas.html"
+                    class="block px-4 py-2 text-md text-black hover:bg-yellow-200">
+                    Curiosidades sobre abelhas e importância delas
+                  </a>
+                  <a href="/pages/conhecimentos e curiosidades/curiosidades/sociedade e o ciclo de vida das abelhas.html"
+                    class="block px-4 py-2 text-md text-black hover:bg-yellow-200">
+                    Sociedade e o ciclo de vida das abelhas
+                  </a>
+                  <a href="/pages/conhecimentos e curiosidades/curiosidades/ferroada de abelha é 200 vezes mais forte que corticoide. V ou F.html"
+                    class="block px-4 py-2 text-md text-black hover:bg-yellow-200">
+                    Ferroada de abelha é 200 vezes mais forte que corticoide.
+                    V ou F?
+                  </a>
+
+                  <div x-data="{open:false}" @click.away="open = false" class="relative">
+                    <div
+                      class="cursor-pointer flex justify-between items-center w-full px-4 mt-2 hover:bg-yellow-200 p-2"
+                      @click="open = !open">
+                      <span class="mr-2 text-lg cursor-pointer">Conhecimentos</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#000000"
+                        viewBox="0 0 256 256">
+                        <path
+                          d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z">
+                        </path>
+                      </svg>
+                    </div>
+
+                    <div x-show="open" x-transition:leave="transition ease-in-out duration-200"
+                      x-transition:leave-start="opacity-1" x-transition:leave-end="opacity-0"
+                      class="submenu__dropdown__box py-2 bg-gray-50 shadow-md z-10" style="display: none">
+                      <a href="/pages/conhecimentos e curiosidades/conhecimentos/abelhas funções do zangão e das operárias.html"
+                        class="block px-4 py-2 text-md text-black hover:bg-yellow-200">
+                        Abelhas funções do zangão e das operárias
+                      </a>
+                      <a href="/pages/conhecimentos e curiosidades/conhecimentos/características gerais e a comunicação das abelhas.html"
+                        class="block px-4 py-2 text-md text-black hover:bg-yellow-200">
+                        Características gerais e a comunicação das abelhas
+                      </a>
+                      <a href="/pages/conhecimentos e curiosidades/conhecimentos/como as abelhas recolhem e transportam o pólen das flores.html"
+                        class="block px-4 py-2 text-md text-black hover:bg-yellow-200">
+                        Como as abelhas recolhem e transportam o pólen das
+                        flores
+                      </a>
+                      <a href="/pages/conhecimentos e curiosidades/conhecimentos/as abelhas são importantes para o planeta.html"
+                        class="block px-4 py-2 text-md text-black hover:bg-yellow-200">
+                        Como as abelhas são importantes para o planeta
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 mx-0">
+              <div x-data="{open:false}" @click.away="open = false" class="relative">
+                <div class="flex items-center rounded-md" @click="open = !open">
+                  <div class="cursor-pointer flex justify-between items-center w-full p-2 hover:bg-yellow-200 rounded">
+                    <span class="mr-2 text-lg">Dicas</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
+                      <path
+                        d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div x-show="open" x-transition:leave="transition ease-in-out duration-200"
+                  x-transition:leave-start="opacity-1" x-transition:leave-end="opacity-0"
+                  class="dropdown__box py-2 bg-gray-50 rounded-lg shadow-md z-10" style="display: none">
+                  <a href="/pages/dicas/6 formas de ter mais abelhas polinizadoras em sua horta ou jardim.html"
+                    class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                    6 formas de ter mais abelhas polinizadoras em sua horta ou
+                    jardim
+                  </a>
+                  <a href="/pages/dicas/7 passos para começar a trabalhar com apicultura.html"
+                    class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                    7 passos para começar a trabalhar com apicultura
+                  </a>
+                  <a href="/pages/dicas/como iniciar uma criação de abelhas.html"
+                    class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                    Como iniciar uma criação de abelhas
+                  </a>
+                  <a href="/pages/dicas/confira os cuidados a tomar com relação as abelhas.html"
+                    class="block px-4 py-2 text-sm text-black hover:bg-yellow-200">
+                    Confira os cuidados a tomar com relação as abelhas
+                  </a>
+                </div>
+              </div>
+            </div>
+            <li
+              class="nav__link block p-2 mb-3 text-lg font-medium text-black hover:bg-yellow-200 rounded cursor-pointer"
+              @click="showModal = true" onclick="showModal()">
+              Contato
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="flex items-center justify-center mx-auto md:px-12 max-w-4xl mt-32 max-md:mx-4">
+    <div>
+      <div class="breadcrumb">
+        <div>Menu</div>
+        /
+        <div>Dicas</div>
+        /
+        <div>8 dicas para as flores durarem mais</div>
+      </div>
+      <h1
+        class="mt-2 text-black font-semibold font-[Roboto] text-center text-5xl max-sm:text-4xl mx-auto lg:leading-right mb-5">
+        8 dicas para as flores durarem mais
+      </h1>
+      <div class="data__socials__container">
+        <span class="text-center">Publicado: Sábado, 19/08/2023 as 12:35</span>
+        <div class="flex items-center gap-4">
+          <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26"
+            color="#000000" fill="none">
+            <path
+              d="M20.3927 8.03168L18.6457 6.51461C17.3871 5.42153 16.8937 4.83352 16.2121 5.04139C15.3622 5.30059 15.642 6.93609 15.642 7.48824C14.3206 7.48824 12.9468 7.38661 11.6443 7.59836C7.34453 8.29742 6 11.3566 6 14.6525C7.21697 13.9065 8.43274 13.0746 9.8954 12.7289C11.7212 12.2973 13.7603 12.5032 15.642 12.5032C15.642 13.0554 15.3622 14.6909 16.2121 14.9501C16.9844 15.1856 17.3871 14.5699 18.6457 13.4769L20.3927 11.9598C21.4642 11.0293 22 10.564 22 9.99574C22 9.4275 21.4642 8.96223 20.3927 8.03168Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M10.5676 3C6.70735 3.00694 4.68594 3.10152 3.39411 4.39073C2 5.78202 2 8.02125 2 12.4997C2 16.9782 2 19.2174 3.3941 20.6087C4.78821 22 7.03198 22 11.5195 22C16.0071 22 18.2509 22 19.645 20.6087C20.6156 19.64 20.9104 18.2603 21 16"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32"
+            title="Whatsapp" viewBox="0 0 32 32" style="fill: #40c057" onclick="location.href='#whatsapp';">
+            <path fill-rule="evenodd"
+              d="M 24.503906 7.503906 C 22.246094 5.246094 19.246094 4 16.050781 4 C 9.464844 4 4.101563 9.359375 4.101563 15.945313 C 4.097656 18.050781 4.648438 20.105469 5.695313 21.917969 L 4 28.109375 L 10.335938 26.445313 C 12.078125 27.398438 14.046875 27.898438 16.046875 27.902344 L 16.050781 27.902344 C 22.636719 27.902344 27.996094 22.542969 28 15.953125 C 28 12.761719 26.757813 9.761719 24.503906 7.503906 Z M 16.050781 25.882813 L 16.046875 25.882813 C 14.265625 25.882813 12.515625 25.402344 10.992188 24.5 L 10.628906 24.285156 L 6.867188 25.269531 L 7.871094 21.605469 L 7.636719 21.230469 C 6.640625 19.648438 6.117188 17.820313 6.117188 15.945313 C 6.117188 10.472656 10.574219 6.019531 16.054688 6.019531 C 18.707031 6.019531 21.199219 7.054688 23.074219 8.929688 C 24.949219 10.808594 25.980469 13.300781 25.980469 15.953125 C 25.980469 21.429688 21.523438 25.882813 16.050781 25.882813 Z M 21.496094 18.445313 C 21.199219 18.296875 19.730469 17.574219 19.457031 17.476563 C 19.183594 17.375 18.984375 17.328125 18.785156 17.625 C 18.585938 17.925781 18.015625 18.597656 17.839844 18.796875 C 17.667969 18.992188 17.492188 19.019531 17.195313 18.871094 C 16.894531 18.722656 15.933594 18.40625 14.792969 17.386719 C 13.90625 16.597656 13.304688 15.617188 13.132813 15.320313 C 12.957031 15.019531 13.113281 14.859375 13.261719 14.710938 C 13.398438 14.578125 13.5625 14.363281 13.710938 14.1875 C 13.859375 14.015625 13.910156 13.890625 14.011719 13.691406 C 14.109375 13.492188 14.058594 13.316406 13.984375 13.167969 C 13.910156 13.019531 13.3125 11.546875 13.0625 10.949219 C 12.820313 10.367188 12.574219 10.449219 12.390625 10.4375 C 12.21875 10.429688 12.019531 10.429688 11.820313 10.429688 C 11.621094 10.429688 11.296875 10.503906 11.023438 10.804688 C 10.75 11.101563 9.980469 11.824219 9.980469 13.292969 C 9.980469 14.761719 11.050781 16.183594 11.199219 16.382813 C 11.347656 16.578125 13.304688 19.59375 16.300781 20.886719 C 17.011719 21.195313 17.566406 21.378906 18 21.515625 C 18.714844 21.742188 19.367188 21.710938 19.882813 21.636719 C 20.457031 21.550781 21.648438 20.914063 21.898438 20.214844 C 22.144531 19.519531 22.144531 18.921875 22.070313 18.796875 C 21.996094 18.671875 21.796875 18.597656 21.496094 18.445313 Z">
+            </path>
+          </svg>
+          <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32"
+            title="Facebook" viewBox="0 0 48 48" onclick="location.href='#facebook';">
+            <path fill="#3b5998" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
+            <path fill="#fff"
+              d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z">
+            </path>
+          </svg>
+        </div>
+      </div>
+      <figure>
+        <img class="max-w-full w-full mx-auto mt-10 my-4"
+          src="https://www.plastprime.com/wp-content/uploads/2020/11/20-01.png.webp" alt="Imagem da Plastprime" />
+        <figcaption class="text-center">Reprodução/Plastprime.com</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto leading-8 max-lg:px-6 mt-10 mb-10">
+    <p class="py-4">
+      Não há como negar que a sensação de receber flores é maravilhosa, não é
+      mesmo? Sim, o perfume e a beleza delas são capazes de encantar qualquer
+      um! Contudo, apesar de todas as qualidades, elas são um presente que
+      tende a durar muito pouco – principalmente quando os cuidados
+      necessários não são tomados. Flores bonitas exigem dedicação, veja como
+      fazê-las durarem mais!
+    </p>
+    <p>
+      Pensando em lhe ajudar a manter essas belezas cheias de cor e perfume,
+      no post de hoje, você vai conferir dicas para as flores durarem mais.
+      Confira!
+    </p>
+    <ol class="list-decimal mx-4 mt-4">
+      <li class="font-semibold text-[1.3em] text-zinc-950">
+        Para as flores durarem mais, coloque-as em um vaso
+      </li>
+      <figure>
+        <img class="mt-4" src="https://www.plastprime.com/wp-content/uploads/2020/11/Img-1-6.jpg.webp" />
+        <figcaption class="text-center">Reprodução/Plastprime.com</figcaption>
+      </figure>
+      <p class="py-2">
+        Se você ganhou suas flores em um buquê ou em um vaso embrulhado, a
+        dica é retirá-las dali o quanto antes. Papéis e plásticos prejudicam o
+        desenvolvimento das flores e tendem a reduzir o seu ciclo de vida.
+      </p>
+      <p class="py-2">
+        Portanto, assim que possível, plante-as em um vaso devidamente
+        higienizado e adequado para o tamanho do ramalhete. Assim, será
+        possível as flores durarem mais e você, ainda, vai poder decorar sua
+        casa!
+      </p>
+      <li class="font-semibold text-[1.3em] text-zinc-950">
+        Coloque pouca água no vaso
+      </li>
+      <figure>
+        <img class="mt-4" src="https://www.plastprime.com/wp-content/uploads/2020/11/Img-2-6.jpg.webp" />
+        <figcaption class="text-center">Reprodução/Plastprime.com</figcaption>
+      </figure>
+      <p class="py-2">
+        O excesso de água também pode ser prejudicial ao seu arranjo e
+        diminuir a vida de suas flores. Com muita umidade, os fungos e as
+        bactérias tendem a aparecer, além de propiciar maior possibilidade de
+        apodrecimento da raiz.
+      </p>
+      <p>
+        Assim, para as flores durarem mais, a água precisa ser na medida certa
+        para manter a saúde da plantinha.
+      </p>
+      <li class="font-semibold text-[1.3em] text-zinc-950 mt-4">
+        Evite locais muito abafados para as flores durarem mais
+      </li>
+      <figure>
+        <img class="mt-4" src="https://www.plastprime.com/wp-content/uploads/2020/11/Img-3-6.jpg.webp" />
+        <figcaption class="text-center">Reprodução/Plastprime.com</figcaption>
+      </figure>
+      <p class="py-4">
+        Deixe suas flores longe do calor e da umidade extrema, isso porque, em
+        um ambiente quente ou abafado, as plantas não conseguem respirar
+        direito e, consequentemente, não mantêm sua saúde.
+      </p>
+      <p>
+        Pode parecer estranho, mas se você não tiver outra alternativa para se
+        livrar do calor, uma dica é colocar suas flores dentro da geladeira –
+        as consequências serão bem menores! Essa é uma forma de conservá-las
+        de um dia para o outro, por exemplo.
+      </p>
+      <li class="font-semibold text-[1.3em] text-zinc-950 mt-4">
+        Retire folhas e pétalas estragadas
+      </li>
+      <figure>
+        <img class="mt-4" src="https://www.plastprime.com/wp-content/uploads/2020/11/Img-4-4.jpg.webp" />
+        <figcaption class="text-center">Reprodução/Plastprime.com</figcaption>
+      </figure>
+      <p class="py-4">
+        As folhas e as pétalas que estiverem estragadas devem ser retiradas do
+        vaso. Isso porque elas podem acabar incentivando a proliferação de
+        bactérias e destruindo o restante da flor.
+      </p>
+      <p>
+        Assim que perceber qualquer sinal, retire imediatamente a parte que
+        estiver danificada, inclusive, para que haja chance de novas flores se
+        desenvolverem em substituição às que foram retiradas.
+      </p>
+      <li class="font-semibold text-[1.3em] text-zinc-950 mt-4">
+        Troque a água com frequência
+      </li>
+      <figure>
+        <img class="mt-4" src="https://www.plastprime.com/wp-content/uploads/2020/11/Img-5-4.jpg.webp" />
+        <figcaption class="text-center">Reprodução/Plastprime.com</figcaption>
+      </figure>
+      <p class="py-4">
+        Crie o hábito de trocar a água da sua flor todos os dias. Se não
+        conseguir, tente, pelo menos, um dia sim, outro não. Manter a água
+        sempre limpa é fundamental para a saúde da planta e para as flores
+        durarem mais, pois evita o acúmulo de fungos e bactérias.
+      </p>
+      <li class="font-semibold text-[1.3em] text-zinc-950 mt-4">
+        Evite exposição direta ao sol
+      </li>
+      <figure>
+        <img class="mt-4" src="https://www.plastprime.com/wp-content/uploads/2020/11/Img-6-3.jpg.webp" />
+        <figcaption class="text-center">Reprodução/Plastprime.com</figcaption>
+      </figure>
+      <p class="py-4">
+        A luz do sol faz bem para qualquer planta, porém, a diretamente pode
+        colocar tudo a perder dependendo do tipo de plantinha.
+      </p>
+      <p>
+        Assim, evite que suas flores fiquem expostas à luz solar direta, pois
+        isso pode queimar as pétalas e folhas, que acabam morrendo
+      </p>
+      <li class="font-semibold text-[1.3em] text-zinc-950 mt-4">
+        Lembre-se de fazer a manutenção do caule
+      </li>
+      <figure>
+        <img class="mt-4" src="https://www.plastprime.com/wp-content/uploads/2020/11/Img-7-3.jpg.webp" />
+        <figcaption class="text-center">Reprodução/Plastprime.com</figcaption>
+      </figure>
+      <p class="py-4">
+        Uma dica essencial é criar o hábito de cortar uma pequena ponta do
+        talo da flor cada vez que houver a troca de água.
+      </p>
+      <p>
+        Você deve cortar, mais ou menos, um tamanho de 0,5 cm, diagonalmente e
+        com uma faca bem afiada (que não tenha serrinhas). Isso auxiliará na
+        absorção de água, estimulando o desenvolvimento das suas flores.
+      </p>
+      <li class="font-semibold text-[1.3em] text-zinc-950 mt-4">
+        Utilize soluções caseiras
+      </li>
+      <figure>
+        <img class="mt-4" src="https://www.plastprime.com/wp-content/uploads/2020/11/Img-8.jpg.webp" />
+        <figcaption class="text-center">Reprodução/Plastprime.com</figcaption>
+      </figure>
+      <p class="py-4">
+        Existem algumas receitinhas muito fáceis, que podem ser feitas em casa
+        e que auxiliam a manter sua flor bonita e perfumada.
+      </p>
+      <p>
+        A mais clássica delas precisa apenas de três ingredientes: limão,
+        vinagre e açúcar. Basta misturar 1 litro de água, suco de meio limão,
+        2 colheres de chá de açúcar cristal e 2 colheres de vinagre branco.
+        Coloque suas flores nesta mistura que logo os resultados começarão a
+        aparecer.
+      </p>
+      <p>
+        Com essas dicas, não é difícil manter as flores cheias de vida, certo?
+        Basta um pouquinho de conhecimento e dedicação. Você vai ver que irá
+        valer a pena cuidar e fazer suas flores durarem mais, enchendo sua
+        casa de cor e charme!
+      </p>
+
+      <h2 class="mt-10 font-semibold text-[1.4em]">Comercialização do mel</h2>
+      <p class="py-4">
+        Os produtores podem se organizar em grupos para fazer o beneficiamento
+        do mel e obter vantagens na comercialização. Há várias formas para a
+        comercialização do mel produzido. Pode-se fazer uma campanha de
+        divulgação sobre os benefícios da utilização do mel como produto de
+        excelente valor para a alimentação.
+      </p>
+      <p class="py-4">
+        O produto pode, então, ser utilizado na merenda escolar, no programa
+        de cesta básica dos governos, incorporado ao cardápio dos refeitórios
+        das grandes empresas e instituições, ampliando o seu consumo pela
+        população em geral. Outros produtos da atividade também podem ser
+        comercializados como, por exemplo, a cera que é utilizada na
+        fabricação de velas decorativas. Há diversas opções, para os
+        produtores empreender na apicultura.
+      </p>
+    </ol>
+  </div>
+
+  <div class="modal fixed inset-0 w-full h-full z-20 bg-black bg-opacity-50 duration-700 overflow-y-auto"
+    x-show="showModal">
+    <div
+      class="flex justify-center items-center min-h-screen sm:w-3/4 md:w-4/3 lg:w-2/3 max-sm:w-full max-md:w-2/3 max-lg:w-2/3 my-2 mx-0 mx-auto opacity-100">
+      <div class="bg-white shadow-lg rounded-md text-gray-900 z-20" x-show="showModal"
+        x-transition:enter="transition transform duration-700" x-transition:enter-start="translate-y-[125%]"
+        x-transition:enter-end="translate-y-0" x-transition:leave="transition transform duration-700"
+        x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-[125%]">
+        <header class="flex items-center justify-end p-2">
+          <button class="focus:outline-none p-2" @click="showModal = false" onclick="closeModal()">
+            <svg class="fill-current hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              width="28" height="28" fill="none">
+              <path d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </header>
+        <section class="text-gray-600 relative">
+          <div class="px-2 py-2 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+              <h1 class="sm:text-3xl text-2xl font-medium mb-4 text-gray-900">
+                Nosso contato
+              </h1>
+              <p class="lg:w-2/3 mx-auto leading-relaxed">
+                Tem algum problema no site, bug ou outra coisa, conte para nós
+                sobre o problema? Ou quer enviar um feedback para o site
+                Abelha Web, ficamos agradecidos, para que possamos melhorar
+                ainda mais o nosso site.
+              </p>
+            </div>
+            <div class="lg:w-11/12 md:2/3 mx-auto">
+              <div class="flex flex-wrap m-2">
+                <div class="p-2 w-1/2 relative">
+                  <label for="email" class="leading-7 text-md text-gray-600">Email</label>
+                  <input type="email" id="email" name="email"
+                    class="w-full bg-gray-50 bg-opacity-50 rounded border border-gray-300 focus:border-blue-700 focus:bg-white focus:ring-2 focus:ring-blue-800 outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease"
+                    placeholder="nome@abelhaweb.com" />
+                </div>
+                <div class="p-2 w-1/2 relative">
+                  <label for="text" class="leading-7 text-md text-gray-600">Assunto</label>
+                  <input type="text" id="text" name="text"
+                    class="w-full bg-gray-50 bg-opacity-50 rounded border border-gray-300 focus:border-blue-700 focus:bg-white focus:ring-2 focus:ring-blue-800 outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease"
+                    placeholder="Deixe-nos saber como lhe posso ajudá-lo" />
+                </div>
+                <div class="p-2 w-full relative">
+                  <label for="email" class="leading-7 text-md text-gray-600">Mensagem</label>
+                  <textarea id="message" name="message"
+                    class="w-full bg-gray-50 bg-opacity-50 rounded border border-gray-300 focus:border-blue-700 focus:bg-white focus:ring-2 focus:ring-blue-800 h-32 outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease"
+                    placeholder="Deixe o seu comentário"></textarea>
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <button type="submit"
+                  class="flex items-center gap-2 mx-auto text-white bg-blue-800 border-0 py-2 px-8 focus: outline-none hover:bg-blue-500 rounded text-lg">
+                  Enviar mensagem
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                    <g fill="none" fill-rule="evenodd">
+                      <path
+                        d="M24 0v24H0V0h24ZM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018Zm.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                      <path fill="currentColor"
+                        d="M17.991 6.01L5.399 10.563l4.195 2.428l3.699-3.7a1 1 0 0 1 1.414 1.415l-3.7 3.7l2.43 4.194L17.99 6.01Zm.323-2.244c1.195-.433 2.353.725 1.92 1.92l-5.282 14.605c-.434 1.198-2.07 1.344-2.709.241l-3.217-5.558l-5.558-3.217c-1.103-.639-.958-2.275.241-2.709l14.605-5.282Z" />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="flex justify-center p-2">
+          <div class="flex gap-4 mb-5 mt-5 text-gray-500">
+            <h2>Abelha Web</h2>
+            <a href="#" target="_blank" title="Facebook">
+              <svg class="hover:scale-125 duration-300 transition-ease-in" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" width="24" height="24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z"
+                  stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#" target="_blank" title="Twitter">
+              <svg class="hover:scale-125 duration-300 transition-ease-in" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" width="24" height="24" fill="none">
+                <path
+                  d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484M13.4516 10.5484L8 3H3L10.5484 13.4516M13.4516 10.5484L21 21H16L10.5484 13.4516"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#" target="_blank" title="Instagram">
+              <svg class="hover:scale-125 duration-300 transition-ease-in" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" width="24" height="24" fill="none">
+                <path
+                  d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                  stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                <path
+                  d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+                  stroke="currentColor" stroke-width="1.5" />
+                <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-[#fff089] p-5">
+    <div class="flex justify-center flex-col gap-3">
+      <div class="flex justify-center items-center gap-2">
+        <img src="/assets/images/logo/logo.png" class="w-10" alt="Logo Abelha Web" />
+        <h2 class="text-lg te">Abelha Web</h2>
+      </div>
+      <div class="socials flex justify-center">
+        <div class="flex gap-6">
+          <a href="#" target="_blank" title="Facebook">
+            <svg class="hover:scale-125 duration-300 transition-ease-in" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" width="24" height="24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="#" target="_blank" title="Twitter">
+            <svg class="hover:scale-125 duration-300 transition-ease-in" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" width="24" height="24" fill="none">
+              <path
+                d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484M13.4516 10.5484L8 3H3L10.5484 13.4516M13.4516 10.5484L21 21H16L10.5484 13.4516"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="#" target="_blank" title="Instagram">
+            <svg class="hover:scale-125 duration-300 transition-ease-in" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" width="24" height="24" fill="none">
+              <path
+                d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              <path
+                d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+                stroke="currentColor" stroke-width="1.5" />
+              <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center justify-center text-center mt-4 gap-5">
+        <h2>
+          Todos os direitos reservados | Copyright &copy; 2023 Abelha Web
+        </h2>
+      </div>
+      <h2 class="text-center">Desenvolvido por Alexsandro</h2>
+    </div>
+  </footer>
+
+  <div>
+    <a href="#" id="back-to-top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+        <path d="M12 4L12 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M17 8.99996C17 8.99996 13.3176 4.00001 12 4C10.6824 3.99999 7 9 7 9" stroke="currentColor"
+          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+  <script src="/assets/scripts/app.js"></script>
+</body>
+
+</html>

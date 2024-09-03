@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="AbelhaWeb | Blog das abelhas" />
+    <link rel="website icon" type="png" href="/assets/images/logo/logo.png" />
+    <title>AbelhaWeb | Blog das abelhas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <link rel="stylesheet" href="/assets/styles/media-queries.css" />
+    <link rel="stylesheet" href="/assets/styles/root.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+
+  <body>
+    <header class="fixed top-0 w-full bg-white z-10">
+      <nav class="flex justify-between items-center px-8 py-4 max-[992px]:px-2">
+        <div class="hidden max-[992px]:block">
+          <button class="burger flex items-center text-black p-3">
+            <svg
+              class="block"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="28"
+              height="28"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M4 5L20 5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4 12L20 12"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4 19L20 19"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <a href="/index.html" class="flex items-center gap-2 text-lg">
+          <img
+            src="/assets/images/logo/logo.png"
+            class="w-8"
+            alt="Logo AbelhaWeb"
+          />
+          Abelha Web
+        </a>
+        <ul
+          class="navlinks max-[992px]:hidden [992px]:flex flex items-center gap-8"
+        >
+          <li><a href="/index.html" class="nav__link active">Início</a></li>
+          <li>
+            <div
+              x-data="{open:false}"
+              @mouseleave="open = false"
+              @mouseover="open = true"
+              class="relative"
+            >
+              <button
+                class="flex items-center rounded-md"
+                @mouseover="open = true"
+              >
+                <span class="mr-2 text-md">Curiosidades</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                  ></path>
+                </svg>
+              </button>
+
+              <div
+                x-show="open"
+                x-transition:leave="transition ease-in-out duration-200"
+                x-transition:leave-start="opacity-1"
+                x-transition:leave-end="opacity-0"
+                class="dropdown__box py-2 bg-gray-50 rounded-lg shadow-md z-10"
+                style="display: none"
+              >
+                <a
+                  href="/pages/conhecimentos e curiosidades/curiosidades/curiosidades sobre abelhas e importância delas.html"
+                  class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                >
+                  Curiosidades sobre abelhas e importância delas
+                </a>
+                <a
+                  href="/pages/conhecimentos e curiosidades/curiosidades/sociedade e o ciclo de vida das abelhas.html"
+                  class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                >
+                  Sociedade e o ciclo de vida das abelhas
+                </a>
+                <a
+                  href="/pages/conhecimentos e curiosidades/curiosidades/ferroada de abelha é 200 vezes mais forte que corticoide. V ou F.html"
+                  class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                >
+                  Ferroada de abelha é 200 vezes mais forte que corticoide. V ou
+                  F?
+                </a>
+
+                <div
+                  x-data="{open:false}"
+                  @mouseleave="open = false"
+                  class="relative"
+                >
+                  <div
+                    class="flex justify-between items-center px-4 mt-2 hover:bg-yellow-200 p-2 cursor-pointer"
+                    @mouseover="open = true"
+                  >
+                    <span class="mr-2 text-md">Conhecimentos</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="#000000"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"
+                      ></path>
+                    </svg>
+                  </div>
+
+                  <div
+                    x-show="open"
+                    x-transition:leave="transition ease-in-out duration-200"
+                    x-transition:leave-start="opacity-1"
+                    x-transition:leave-end="opacity-0"
+                    class="submenu__dropdown__box py-2 bg-gray-50 shadow-md z-10"
+                    style="display: none"
+                  >
+                    <a
+                      href="/pages/conhecimentos e curiosidades/conhecimentos/abelhas funções do zangão e das operárias.html"
+                      class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                    >
+                      Abelhas funções do zangão e das operárias
+                    </a>
+                    <a
+                      href="/pages/conhecimentos e curiosidades/conhecimentos/características gerais e a comunicação das abelhas.html"
+                      class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                    >
+                      Características gerais e a comunicação das abelhas
+                    </a>
+                    <a
+                      href="/pages/conhecimentos e curiosidades/conhecimentos/como as abelhas recolhem e transportam o pólen das flores.html"
+                      class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                    >
+                      Como as abelhas recolhem e transportam o pólen das flores
+                    </a>
+                    <a
+                      href="/pages/conhecimentos e curiosidades/conhecimentos/as abelhas são importantes para o planeta.html"
+                      class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                    >
+                      Como as abelhas são importantes para o planeta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              x-data="{open:false}"
+              @mouseleave="open = false"
+              @mouseover="open = true"
+              class="relative"
+            >
+              <button
+                class="flex items-center rounded-md"
+                @mouseover="open = true"
+              >
+                <span class="mr-2 text-md">Dicas</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                  ></path>
+                </svg>
+              </button>
+
+              <div
+                x-show="open"
+                x-transition:leave="transition ease-in-out duration-200"
+                x-transition:leave-start="opacity-1"
+                x-transition:leave-end="opacity-0"
+                class="dropdown__box py-2 bg-gray-50 rounded-lg shadow-md z-10"
+                style="display: none"
+              >
+                <a
+                  href="/pages/dicas/6 formas de ter mais abelhas polinizadoras em sua horta ou jardim.html"
+                  class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                >
+                  6 formas de ter mais abelhas polinizadoras em sua horta ou
+                  jardim
+                </a>
+                <a
+                  href="/pages/dicas/7 passos para começar a trabalhar com apicultura.html"
+                  class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                >
+                  7 passos para começar a trabalhar com apicultura
+                </a>
+                <a
+                  href="/pages/dicas/8 dicas para as flores durarem mais.html"
+                  class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                >
+                  8 dicas para as flores durarem mais
+                </a>
+                <a
+                  href="/pages/dicas/como iniciar uma criação de abelhas.html"
+                  class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                >
+                  Como iniciar uma criação de abelhas
+                </a>
+                <a
+                  href="/pages/dicas/confira os cuidados a tomar com relação as abelhas.html"
+                  class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                >
+                  Confira os cuidados a tomar com relação as abelhas
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <button class="search__btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            color="#000000"
+            fill="none"
+          >
+            <path
+              d="M17.5 17.5L22 22"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <div class="search__container">
+          <div class="search__box">
+            <form action="#">
+              <input type="search" placeholder="Buscar" />
+              <button type="submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 17.5L22 22"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="close__btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </nav>
+      <div class="menu relative z-10 invisible">
+        <div class="opacity-menu fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+          class="menu__navigation flex-flex-col w-5/6 max-w-sm h-full py-6 px-6 bg-white border-r overflow-y-auto"
+        >
+          <div class="flex items-center mb-8">
+            <a
+              href="/index.html"
+              class="flex items-center gap-2 mr-auto text-lg font-medium"
+            >
+              <img
+                src="/assets/images/logo/logo.png"
+                class="w-9"
+                alt="Logo AbelhaWeb"
+              />
+              Abelha Web
+            </a>
+            <button class="close-menu">
+              <svg
+                class="cursor-pointer hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="28"
+                height="28"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul class="navlinks__menu">
+              <li class="mb-3">
+                <a
+                  href="/index.html"
+                  class="block p-2 text-lg font-medium text-black hover:bg-yellow-200 rounded nav__link active"
+                  >Início</a
+                >
+              </li>
+              <div class="mb-3 mx-0">
+                <div
+                  x-data="{open:false}"
+                  @click.away="open = false"
+                  class="relative"
+                >
+                  <div
+                    class="flex items-center rounded-md"
+                    @click="open = !open"
+                  >
+                    <div
+                      class="cursor-pointer flex justify-between items-center w-full p-2 hover:bg-yellow-200 rounded"
+                    >
+                      <span class="mr-2 text-lg">Curiosidades</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="#000000"
+                        viewBox="0 0 256 256"
+                      >
+                        <path
+                          d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div
+                    x-show="open"
+                    x-transition:leave="transition ease-in-out duration-200"
+                    x-transition:leave-start="opacity-1"
+                    x-transition:leave-end="opacity-0"
+                    class="dropdown__box py-2 bg-gray-50 rounded-lg shadow-md z-10"
+                    style="display: none"
+                  >
+                    <a
+                      href="/pages/conhecimentos e curiosidades/curiosidades/curiosidades sobre abelhas e importância delas.html"
+                      class="block px-4 py-2 text-md text-black hover:bg-yellow-200"
+                    >
+                      Curiosidades sobre abelhas e importância delas
+                    </a>
+                    <a
+                      href="/pages/conhecimentos e curiosidades/curiosidades/sociedade e o ciclo de vida das abelhas.html"
+                      class="block px-4 py-2 text-md text-black hover:bg-yellow-200"
+                    >
+                      Sociedade e o ciclo de vida das abelhas
+                    </a>
+                    <a
+                      href="/pages/conhecimentos e curiosidades/curiosidades/ferroada de abelha é 200 vezes mais forte que corticoide. V ou F.html"
+                      class="block px-4 py-2 text-md text-black hover:bg-yellow-200"
+                    >
+                      Ferroada de abelha é 200 vezes mais forte que corticoide.
+                      V ou F?
+                    </a>
+
+                    <div
+                      x-data="{open:false}"
+                      @click.away="open = false"
+                      class="relative"
+                    >
+                      <div
+                        class="cursor-pointer flex justify-between items-center w-full px-4 mt-2 hover:bg-yellow-200 p-2"
+                        @click="open = !open"
+                      >
+                        <span class="mr-2 text-lg cursor-pointer"
+                          >Conhecimentos</span
+                        >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          fill="#000000"
+                          viewBox="0 0 256 256"
+                        >
+                          <path
+                            d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"
+                          ></path>
+                        </svg>
+                      </div>
+
+                      <div
+                        x-show="open"
+                        x-transition:leave="transition ease-in-out duration-200"
+                        x-transition:leave-start="opacity-1"
+                        x-transition:leave-end="opacity-0"
+                        class="submenu__dropdown__box py-2 bg-gray-50 shadow-md z-10"
+                        style="display: none"
+                      >
+                        <a
+                          href="/pages/conhecimentos e curiosidades/conhecimentos/abelhas funções do zangão e das operárias.html"
+                          class="block px-4 py-2 text-md text-black hover:bg-yellow-200"
+                        >
+                          Abelhas funções do zangão e das operárias
+                        </a>
+                        <a
+                          href="/pages/conhecimentos e curiosidades/conhecimentos/características gerais e a comunicação das abelhas.html"
+                          class="block px-4 py-2 text-md text-black hover:bg-yellow-200"
+                        >
+                          Características gerais e a comunicação das abelhas
+                        </a>
+                        <a
+                          href="/pages/conhecimentos e curiosidades/conhecimentos/como as abelhas recolhem e transportam o pólen das flores.html"
+                          class="block px-4 py-2 text-md text-black hover:bg-yellow-200"
+                        >
+                          Como as abelhas recolhem e transportam o pólen das
+                          flores
+                        </a>
+                        <a
+                          href="/pages/conhecimentos e curiosidades/conhecimentos/as abelhas são importantes para o planeta.html"
+                          class="block px-4 py-2 text-md text-black hover:bg-yellow-200"
+                        >
+                          Como as abelhas são importantes para o planeta
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3 mx-0">
+                <div
+                  x-data="{open:false}"
+                  @click.away="open = false"
+                  class="relative"
+                >
+                  <div
+                    class="flex items-center rounded-md"
+                    @click="open = !open"
+                  >
+                    <div
+                      class="cursor-pointer flex justify-between items-center w-full p-2 hover:bg-yellow-200 rounded"
+                    >
+                      <span class="mr-2 text-lg">Dicas</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="#000000"
+                        viewBox="0 0 256 256"
+                      >
+                        <path
+                          d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div
+                    x-show="open"
+                    x-transition:leave="transition ease-in-out duration-200"
+                    x-transition:leave-start="opacity-1"
+                    x-transition:leave-end="opacity-0"
+                    class="dropdown__box py-2 bg-gray-50 rounded-lg shadow-md z-10"
+                    style="display: none"
+                  >
+                    <a
+                      href="/pages/dicas/6 formas de ter mais abelhas polinizadoras em sua horta ou jardim.html"
+                      class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                    >
+                      6 formas de ter mais abelhas polinizadoras em sua horta ou
+                      jardim
+                    </a>
+                    <a
+                      href="/pages/dicas/7 passos para começar a trabalhar com apicultura.html"
+                      class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                    >
+                      7 passos para começar a trabalhar com apicultura
+                    </a>
+                    <a
+                      href="/pages/dicas/8 dicas para as flores durarem mais.html"
+                      class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                    >
+                      8 dicas para as flores durarem mais
+                    </a>
+                    <a
+                      href="/pages/dicas/como iniciar uma criação de abelhas.html"
+                      class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                    >
+                      Como iniciar uma criação de abelhas
+                    </a>
+                    <a
+                      href="/pages/dicas/confira os cuidados a tomar com relação as abelhas.html"
+                      class="block px-4 py-2 text-sm text-black hover:bg-yellow-200"
+                    >
+                      Confira os cuidados a tomar com relação as abelhas
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="main__container">
+        <div data-aos="fade-down" data-aos-duration="1000">
+          <h1
+            class="max-w-xl text-left leading-tight text-5xl max-sm:text-3xl mb-6 max-[992px]:text-center max-lg:mt-14"
+          >
+           Um blog com um conteudo sobre as abelhas
+          </h1>
+          <p
+            class="max-w-lg text-left leading-7 text-gray-700 max-[992px]:text-center"
+          >
+            Conhecimentos no ramo de abelhas, e dicas para trabalhar como
+            apicultor, e também sobre as abelhas polinizadoras em sua horta,
+            isso e muito mais é só aqui na Abelha Web.
+          </p>
+        </div>
+        <div class="lg:w-2/4">
+          <img
+            src="/assets/images/bee.png"
+            class="mx-auto max-w-full mr-10 max-sm:w-72 max-sm:mx-auto py-10"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          />
+        </div>
+      </div>
+    </main>
+
+    <section class="container__news">
+      <h2
+        class="container__heading"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        Conhecimentos e curiosidades
+      </h2>
+      <div class="container__card">
+        <div
+          class="card__item"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="100"
+        >
+          <div class="image">
+            <img
+              src="/assets/images/photos/exame-de-abelhas.jpg"
+              alt="Exame de abelhas"
+            />
+          </div>
+          <div class="card__content">
+            <h2 class="title">Abelhas funções do zangão e das operárias</h2>
+            <p class="paragraph">
+              Os machos da colônia, denominados zangões, possuem a única função
+              de fecundar a rainha durante o voo nupcial
+            </p>
+            <a
+              class="view__more"
+              href="/pages/Conhecimentos e curiosidades/Conhecimentos/Abelhas funções do zangão e das operárias.html"
+              >Saber mais</a
+            >
+          </div>
+        </div>
+        <div
+          class="card__item"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="200"
+        >
+          <div class="image">
+            <img
+              src="/assets/images/photos/abelha.jpg"
+              alt="Abelha na madeira"
+            />
+          </div>
+          <div class="card__content">
+            <h2 class="title">
+              Características gerais e a comunicação das abelhas
+            </h2>
+            <p class="paragraph">
+              As abelhas são animais do filo Arthropoda, sendo assim, herdam
+              algumas características típicas desse grupo, como o fato de
+              possuírem um exoesqueleto que envolve seu corpo.
+            </p>
+            <a
+              class="view__more"
+              href="/pages/Conhecimentos e curiosidades/Conhecimentos/Características gerais e a comunicação das abelhas.html"
+              >Saber mais</a
+            >
+          </div>
+        </div>
+        <div
+          class="card__item"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="300"
+        >
+          <div class="image">
+            <img
+              src="/assets/images/photos/abelha-na-flor.jpg"
+              alt="Abelha na flor amarela"
+            />
+          </div>
+          <div class="card__content">
+            <h2 class="title">
+              Como as abelhas recolhem e transportam o pólen das flores
+            </h2>
+            <p class="paragraph">
+              O pólen está presente nas flores, e é o gameta masculino da
+              planta. É coletado pelas abelhas que o enriquece com suas enzimas
+              e o transporta até a colmeia, onde é depositado
+            </p>
+            <a
+              class="view__more"
+              href="/pages/Conhecimentos e curiosidades/Conhecimentos/Como as abelhas recolhem e transportam o pólen das flores.html"
+              >Saber mais</a
+            >
+          </div>
+        </div>
+        <div
+          class="card__item"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="400"
+        >
+          <div class="image">
+            <img
+              src="/assets/images/photos/abelha-marrom.jpg"
+              alt="Abelha marrom"
+            />
+          </div>
+          <div class="card__content">
+            <h2 class="title">
+              Curiosidades sobre abelhas e importância delas
+            </h2>
+            <p class="paragraph">
+              Se você acha que esses animais só servem para produzir o mel, não
+              os conhece de fato
+            </p>
+            <a
+              class="view__more"
+              href="/pages/Conhecimentos e curiosidades/Curiosidades/Curiosidades sobre abelhas e importância delas.html"
+              >Saber mais</a
+            >
+          </div>
+        </div>
+        <div
+          class="card__item"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="500"
+        >
+          <div class="image">
+            <img
+              src="/assets/images/photos/abelhas-voando-no-ar.jpg"
+              alt="Abelhas voando no ar"
+            />
+          </div>
+          <div class="card__content">
+            <h2 class="title">Sociedade e o ciclo de vida das abelhas</h2>
+            <p class="paragraph">
+              Quando observamos uma colmeia, verificamos que os indivíduos que
+              nela vivem trabalham de forma cooperativa e há uma divisão em
+              castas. As três castas são a rainha, o zangão e a operária.
+            </p>
+            <a
+              class="view__more"
+              href="/pages/Conhecimentos e curiosidades/Curiosidades/Sociedade e o ciclo de vida das abelhas.html"
+              >Saber mais</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner__container">
+      <img
+        src="/assets/images/abelhas-voando-e-um-camaleão-se-misturando-com-as-plantas.png"
+        alt="Abelhas voando, e um camaleão se misturando com as plantas na selva - ilustração"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-delay="200"
+      />
+      <div
+        class="banner__content"
+        data-aos="fade-down"
+        data-aos-duration="700"
+        data-aos-delay="200"
+      >
+        <h2 class="banner__title">
+          Abelha web - Informaçãoes e conteudo sobre abelhas
+        </h2>
+        <p class="banner__paragraph">
+          Informaçãoes e curiosidades sobre as abelhas, cuidados e como é feito
+          a criação de mel e muitos mais.
+        </p>
+      </div>
+    </section>
+
+    <div
+      class="max-w-[75rem] my-[-1em] md:py-[60] py-5 mx-auto mt-24"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="500"
+    >
+      <h1 class="posts text-4xl text-center max-[380px]:text-[1.85rem]">
+        Artigos Abelha Web
+      </h1>
+    </div>
+
+    <div
+      class="flex gap-6 max-w-7xl mx-auto justify-between max-lg:flex-wrap max-lg:justify-center max-md:mx-[1rem] mx-5 mt-10 mb-14"
+    >
+      <div
+        class="max-w-2xl bg-white rounded-xl overflow-hidden p-4 shadow-md max-md:p-0 max-md:max-w-sm max-md:pb-4"
+        data-aos="fade-down"
+        data-aos-duration="800"
+        data-aos-delay="200"
+      >
+        <div class="md:flex">
+          <div class="md:shrink-0">
+            <img
+              class="w-48 h-full object-cover rounded-sm max-md:w-full"
+              src="/assets/images/photos/ferroada-de-abelha.jpg"
+              alt="Ilustração de uma ferroada de abelha"
+            />
+          </div>
+          <div class="mx-4 py-4">
+            <div
+              class="uppercase tracking-wide text-sm text-blue-600 mb-2 font-semibold"
+            >
+              Tratamentos naturais
+            </div>
+            <h2 class="text-lg">
+              Ferroada de abelha é 200 vezes mais forte que corticoide. V ou F?
+            </h2>
+            <p class="mt-2 mb-6 text-gray-600 line-clamp-2">
+              A opção por tratamentos naturais tem sido uma tendência das
+              últimas décadas devido à tentativa do ser humano de retomar
+              relações saudáveis com o meio ambiente, favorecendo o próprio
+              bem-estar.
+            </p>
+            <a
+              class="border-solid border-2 border-[#f6c312] text-balck w-max p-2 pr-5 pl-5 rounded-md hover:bg-[#f6c312] duration-300"
+              href="/pages/conhecimentos e curiosidades/curiosidades/ferroada de abelha é 200 vezes mais forte que corticoide. V ou F.html"
+              target="_blank"
+              >Saber mais</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-2xl bg-white rounded-xl overflow-hidden p-4 shadow-md max-md:p-0 max-md:max-w-sm max-md:pb-4"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      >
+        <div class="md:flex">
+          <div class="md:shrink-0">
+            <img
+              class="w-48 h-full object-cover rounded-sm max-md:w-full"
+              src="/assets/images/photos/enxame-de-abelhas-em-cima-de-uma-colmeia.jpg"
+              alt="Ferroada de abelha"
+            />
+          </div>
+          <div class="mx-4 py-4">
+            <div
+              class="uppercase tracking-wide text-sm text-blue-600 mb-2 font-semibold"
+            >
+              Perigo
+            </div>
+            <h2 class="text-lg">
+              Confira os cuidados a tomar com relação as abelhas
+            </h2>
+            <p class="mt-2 mb-6 text-gray-600 line-clamp-2">
+              Alem de ter cuidado com as abelhas o ferrao da abelha pode deixar
+              uma pessoa ferida, por isso e recomendado usar a roupa de proteção
+              para abelha. e se encontrar um caixo de abelha chama os corpos de
+              bombeiros.
+            </p>
+            <a
+              class="border-solid border-2 border-[#f6c312] text-black w-max p-2 pr-5 pl-5 rounded-md hover:bg-[#f6c312] duration-300"
+              href="/pages/dicas/confira os cuidados a tomar com relação as abelhas.html"
+              target="_blank"
+              >Saber mais</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="text-gray-600 relative">
+      <div class="px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+          <h1 class="sm:text-3xl text-2xl font-medium mb-4 text-gray-900">
+            Nosso contato
+          </h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed">
+            Tem algum problema no site, bug ou outra coisa, conte para nós sobre
+            o problema? Ou quer enviar um feedback para o site Abelha Web,
+            ficamos agradecidos, para que possamos melhorar ainda mais o nosso
+            site.
+          </p>
+        </div>
+        <div class="lg:w-2/3 md:2/3 max-w-5xl mx-auto">
+          <div class="flex flex-wrap m-2">
+            <div class="p-2 w-1/2 relative">
+              <label for="email" class="leading-7 text-md text-gray-600"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full bg-gray-50 bg-opacity-50 rounded border border-gray-300 focus:border-blue-700 focus:bg-white focus:ring-2 focus:ring-blue-800 outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease"
+                placeholder="nome@abelhaweb.com"
+              />
+            </div>
+            <div class="p-2 w-1/2 relative">
+              <label for="text" class="leading-7 text-md text-gray-600"
+                >Assunto</label
+              >
+              <input
+                type="text"
+                id="text"
+                name="text"
+                class="w-full bg-gray-50 bg-opacity-50 rounded border border-gray-300 focus:border-blue-700 focus:bg-white focus:ring-2 focus:ring-blue-800 outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease"
+                placeholder="Deixe-nos saber como lhe posso ajudá-lo"
+              />
+            </div>
+            <div class="p-2 w-full relative">
+              <label for="email" class="leading-7 text-md text-gray-600"
+                >Mensagem</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                class="w-full bg-gray-50 bg-opacity-50 rounded border border-gray-300 focus:border-blue-700 focus:bg-white focus:ring-2 focus:ring-blue-800 h-32 outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease"
+                placeholder="Deixe o seu comentário"
+              ></textarea>
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <button
+              type="submit"
+              class="flex items-center gap-2 mx-auto text-white bg-blue-800 border-0 py-2 px-8 focus: outline-none hover:bg-blue-500 rounded text-lg"
+            >
+              Enviar mensagem
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+              >
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                    d="M24 0v24H0V0h24ZM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018Zm.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M17.991 6.01L5.399 10.563l4.195 2.428l3.699-3.7a1 1 0 0 1 1.414 1.415l-3.7 3.7l2.43 4.194L17.99 6.01Zm.323-2.244c1.195-.433 2.353.725 1.92 1.92l-5.282 14.605c-.434 1.198-2.07 1.344-2.709.241l-3.217-5.558l-5.558-3.217c-1.103-.639-.958-2.275.241-2.709l14.605-5.282Z"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#fff089] p-5">
+      <div class="flex justify-center flex-col gap-3">
+        <div class="flex justify-center items-center gap-2">
+          <img
+            src="/assets/images/logo/logo.png"
+            class="w-10"
+            alt="Logo Abelha Web"
+          />
+          <h2 class="text-lg te">Abelha Web</h2>
+        </div>
+        <div class="socials flex justify-center">
+          <div class="flex gap-6">
+            <a href="#" target="_blank" title="Facebook">
+              <svg
+                class="hover:scale-125 duration-300 transition-ease-in"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a href="#" target="_blank" title="Twitter">
+              <svg
+                class="hover:scale-125 duration-300 transition-ease-in"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+              >
+                <path
+                  d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484M13.4516 10.5484L8 3H3L10.5484 13.4516M13.4516 10.5484L21 21H16L10.5484 13.4516"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a href="#" target="_blank" title="Instagram">
+              <svg
+                class="hover:scale-125 duration-300 transition-ease-in"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+              >
+                <path
+                  d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M17.5078 6.5L17.4988 6.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="flex items-center justify-center text-center mt-4 gap-5">
+          <h2>
+            Todos os direitos reservados | Copyright &copy; 2023 Abelha Web
+          </h2>
+        </div>
+        <h2 class="text-center">Desenvolvido por Alexsandro</h2>
+      </div>
+    </footer>
+
+    <div>
+      <a href="#" id="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M12 4L12 20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M17 8.99996C17 8.99996 13.3176 4.00001 12 4C10.6824 3.99999 7 9 7 9"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/scripts/app.js"></script>
+    <script type="module" src="/assets/scripts/aos.js"></script>
+  </body>
+</html>
